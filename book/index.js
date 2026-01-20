@@ -80,8 +80,8 @@ function updateBook(){
 
     localStorage.setItem("BookVoList", JSON.stringify(arr));
     alert("수정완료!");
-    document.querySelector("input[name=title]").value = "";
-    document.querySelector("input[name=price]").value = "";
+    document.querySelector("input[name=upTitle]").value = "";
+    document.querySelector("input[name=upPrice]").value = "";
 
 
 
