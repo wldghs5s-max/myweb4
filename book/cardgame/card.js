@@ -10,7 +10,7 @@ function setListenerToCard(){
     for(const cardArea of cardAreaArr){
         cardArea.addEventListener("click" , function(evt){
             //같은카드 방지
-            if(selectedCard01!==null&&!selectedCard02===null&&cardArea===selectedCard01){
+            if(selectedCard01!==null&&selectedCard02===null&&cardArea===selectedCard01){
                 return;
             }
 
