@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도서관리</title>
-    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="../layout.css">
+    <script defer src="./book.js"></script>
+    <title>KH</title>
 </head>
 <body>
-    <h1>도서관리 프로그램</h1>
-
-    <div>
+    <header>
+        <div>이미지</div>
+        <div><a href="../home.html">홈버튼</a></div>
+        <div>유저정보</div>
+    </header>
+    <nav>
+        <a href="../cardgame/card.html">카드게임</a>
+        <a href="../board/board.html">게시판</a>
+        <a href="../book/book.html">도서등록</a>
+        <a href="../member/member.html">유저정보</a>
+    </nav>
+    <main>
+            <div>
         <hr>
         <input type="text" name="title" placeholder="책제목을 입력하세요.">
         <br>
@@ -32,8 +43,8 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td><input type="text" name="upTitle"></td>
-                    <td><input type="number" name="upPrice"></td>
+                    <td><input type="text" name="upTitle" placeholder="변경제목"></td>
+                    <td><input type="number" name="upPrice" placeholder="변경가격"></td>
                     <td><button onclick="updateBook();">수정하기</button></td>
                 </tr>
             </tfoot>
@@ -41,6 +52,7 @@
 
         </table>
     </div>
+    </main>
     
 </body>
 </html>
