@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="member.css">
-    <script defer src="member.js"></script>
+    <script defer src="member_insert.js"></script>
     <script defer src="home.js"></script>
     <title>KH</title>
 </head>
@@ -19,17 +19,25 @@
         <a href="../cardgame/card.html">카드게임</a>
         <a href="../board/board.html">게시판</a>
         <a href="../book/book.html">도서등록</a>
-        <a href="./member.html">유저정보</a>
+        <a href="./book/member.html">유저정보</a>
     </nav>
     <main>
-        <h1>로그인</h1>
+        <h1>회원정보 수정</h1>
         <hr>
-        <input type="text" name="userId" placeholder="아이디">
-        <br>
-        <input type="password" name="userPw" placeholder="비밀번호">
-        <br>
-        <button onclick="login();">로그인</button>
-        <button onclick="location.href = `./member_insert.html`;">회원가입</button>
+        <fieldset>
+                <legend>선호도 체크</legend>
+                <label>
+                    포켓몬 <input type="radio" name="select" value="po" onclick='getPodi(event)'>
+                </label>
+                <br>
+                <label>디지몬</label>
+                <input type="radio" name="select" value="di" onclick='getPodi(event)'>
+            </fieldset>
+            
+
+
+        
+        <button onclick="betrayal();">배신하기</button>
         
     </main>
     

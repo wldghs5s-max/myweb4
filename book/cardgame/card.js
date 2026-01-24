@@ -82,16 +82,60 @@ function generateCardList(){
     const arr = cardContentArr.concat(cardContentArr);
 
     const result = shuffleArr(arr);
-    for(temp of arr){
+
+    const voList = JSON.parse(localStorage.getItem("memberVoList"));
+    const re = voList.findIndex((item)=>item.userId===localStorage.getItem("userID"));
+    const betrayal = voList[re].betrayal;
+    const podi = voList[re].podi;
+    if(podi=="po"&&betrayal=="N"){
+            for(temp of arr){
         ma.innerHTML += `
             <div class="card-area">
                     <div class="card">
-                    <div class="card-back"><img src="../static/${temp}.jpg" alt="" width="80px" height="108px"></div>
-                    <div class="card-front"><img src="../static/front.jpg" alt="" width="80px" height="108px"></div>
+                    <div class="card-back"><img src="../static/po${temp}.png" alt="" width="80px" height="108px"></div>
+                    <div class="card-front"><img src="../static/poback.png" alt="" width="80px" height="108px"></div>
                 </div>
             </div>
 `;
     }
+    }
+    if(podi=="di"&&betrayal=="N"){
+            for(temp of arr){
+        ma.innerHTML += `
+            <div class="card-area">
+                    <div class="card">
+                    <div class="card-back"><img src="../static/di${temp}.png" alt="" width="80px" height="108px"></div>
+                    <div class="card-front"><img src="../static/diback.png" alt="" width="80px" height="108px"></div>
+                </div>
+            </div>
+`;
+    }
+    }
+    if(podi=="po"&&betrayal=="Y"){
+            for(temp of arr){
+        ma.innerHTML += `
+            <div class="card-area">
+                    <div class="card">
+                    <div class="card-back"><img src="../static/po${temp}.png" alt="" width="80px" height="108px"></div>
+                    <div class="card-front"><img src="../static/skul.png" alt="" width="80px" height="108px"></div>
+                </div>
+            </div>
+`;
+    }
+    }
+    if(podi=="di"&&betrayal=="Y"){
+            for(temp of arr){
+        ma.innerHTML += `
+            <div class="card-area">
+                    <div class="card">
+                    <div class="card-back"><img src="../static/di${temp}.png" alt="" width="80px" height="108px"></div>
+                    <div class="card-front"><img src="../static/besin.png" alt="" width="80px" height="108px"></div>
+                </div>
+            </div>
+`;
+    }
+    }
+
 }
 
 function shuffleArr(arr){

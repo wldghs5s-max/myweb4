@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="layout.css">
+    <script defer src="home.js"></script>
     <title>KH</title>
 </head>
 <body>
@@ -16,10 +17,11 @@
         <a href="./cardgame/card.html">카드게임</a>
         <a href="./board/board.html">게시판</a>
         <a href="./book/book.html">도서등록</a>
-        <a href="./member/member.html">유저정보</a>
+        <a onclick="memberCheck();">유저정보</a>
     </nav>
     <main>
         <h1>홈페이지</h1>
+        <button onclick="logout();">로그아웃</button>
     </main>
     
 </body>
